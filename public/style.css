@@ -1,22 +1,31 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
-*{
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Poppins',sans-serif;
+  font-family: 'Poppins', sans-serif;
 }
-.outer{
+
+body {
+  background-color: #f2f2f2;
+  transition: background-color 0.3s ease;
+}
+
+.outer {
   height: 100vh;
   width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
   background: #f2f2f2;
+  transition: background-color 0.3s ease;
 }
-#switch:checked ~ .outer{
-  background: #000000;
+
+#switch:checked ~ .outer {
+  background: #121212;
 }
-.content{
+
+.content {
   display: flex;
   width: 570px;
   padding: 15px;
@@ -24,27 +33,33 @@
   border-radius: 12px;
   position: relative;
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
+  transition: background 0.3s ease, box-shadow 0.3s ease;
 }
-#switch:checked ~ .outer .content{
+
+#switch:checked ~ .outer .content {
   background: #141212;
-  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
 }
-.outer .toggle{
+
+.outer .toggle {
   position: absolute;
   width: 40px;
   height: 20px;
   border-radius: 20px;
-  background: #000000;
+  background: #000;
   right: 15px;
   top: 13px;
   display: flex;
   align-items: center;
   cursor: pointer;
+  transition: background-color 0.3s ease;
 }
-#switch:checked ~ .outer .toggle{
+
+#switch:checked ~ .outer .toggle {
   background: #fff;
 }
-.outer .toggle .circle{
+
+.outer .toggle .circle {
   margin-left: 3px;
   height: 16px;
   width: 16px;
@@ -52,17 +67,22 @@
   background: #fff;
   transition: all 0.3s ease;
 }
-#switch:checked ~ .outer .circle{
+
+#switch:checked ~ .outer .circle {
   margin-left: 22px;
-  background: #000000;
+  background: #000;
 }
+
 .image-box {
   height: 232px;
   width: 200px;
   border-radius: 12px;
   padding: 3px;
   background: #171717;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  transition: box-shadow 0.3s ease;
 }
+
 .image-box img {
   height: 100%;
   width: 100%;
@@ -70,75 +90,96 @@
   border: 3px solid #fff;
   border-radius: 12px;
 }
-#switch:checked ~ .outer .image-box{
-  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
+
+#switch:checked ~ .outer .image-box {
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
 }
-#switch:checked ~ .outer .image-box img{
+
+#switch:checked ~ .outer .image-box img {
   border-color: transparent;
 }
-.content .details{
+
+.content .details {
   width: 58%;
   margin: 10px 0 20px 20px;
-  color: #000000;
+  color: #000;
+  transition: color 0.3s ease;
 }
-#switch:checked ~ .outer .details{
-  transition: 0.1s;
+
+#switch:checked ~ .outer .details {
   color: #fff;
 }
-.content .details .name{
+
+.content .details .name {
   font-size: 23px;
   font-weight: 600;
+  transition: color 0.3s ease;
 }
-.content .details .job{
+
+.content .details .job {
   font-size: 18px;
   font-weight: 500;
+  transition: color 0.3s ease;
 }
-.content .details p{
- font-size: 15px;
- margin-top: 6px;
+
+.content .details p {
+  font-size: 15px;
+  margin-top: 6px;
+  transition: color 0.3s ease;
 }
-.content button{
+
+.content button {
   display: block;
   margin-top: 16px;
   outline: none;
   border: none;
   font-size: 17px;
-  padding: 6px 14px;
+  padding: 8px 18px;
   border-radius: 6px;
   color: #fff;
   cursor: pointer;
-  background: #000000;
+  background: #000;
   transition: all 0.3s ease;
 }
-.content button:hover{
+
+.content button:hover {
   transform: scale(0.97);
+  background-color: #333;
 }
-#switch:checked ~ .outer button{
-  background: #000000;
-  color: #000000;
+
+#switch:checked ~ .outer button {
+  background: #333;
+  color: #fff;
 }
-.media-icons{
+
+.media-icons {
   position: absolute;
   bottom: 16px;
   right: 15px;
   margin-top: 12px;
   justify-content: flex-end;
 }
-.media-icons i{
+
+.media-icons i {
   display: inline-flex;
-  margin: 0 4px;
-  font-size: 16px;
-  color: #000000;
+  margin: 0 6px;
+  font-size: 18px;
+  color: #000;
   opacity: 0.7;
   cursor: pointer;
+  transition: opacity 0.3s ease, transform 0.3s ease;
 }
-.media-icons i:hover{
+
+.media-icons i:hover {
+  opacity: 1;
+  transform: scale(1.1);
+}
+
+#switch:checked ~ .outer i {
+  color: #fff;
   opacity: 1;
 }
-#switch:checked ~ .outer i{
-  color: #ffffff;
-  opacity: 1;
-}
-#switch{
+
+#switch {
   display: none;
 }
