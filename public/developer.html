@@ -1,41 +1,212 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
-  <head>
-    <meta charset="UTF-8">
-   <title>🧑‍🔧|𝗦𝗧𝗔𝗙𝗙</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"/>
-    <link rel="icon" type="image" href="https://i.ibb.co/nrm9GZ2/078531b82abe992b705dceb8842b2617.jpg">
-     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   </head>
+<html lang="fr" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>🧑‍🔧|Autobot - Aziz Van Gogh</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="icon" type="image" href="https://i.ibb.co/nrm9GZ2/078531b82abe992b705dceb8842b2617.jpg">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"/>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+      background-color: #f0f0f0;
+      color: #333;
+      font-size: 16px;
+    }
+
+    .container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .outer {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: #fff;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      border-radius: 15px;
+      padding: 20px;
+    }
+
+    .content {
+      display: flex;
+      align-items: center;
+      max-width: 1200px;
+      width: 100%;
+      padding: 20px;
+    }
+
+    .image-box {
+      width: 200px;
+      height: 200px;
+      border-radius: 50%;
+      overflow: hidden;
+      margin-right: 20px;
+    }
+
+    .profile-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .details {
+      color: #333;
+      flex: 1;
+    }
+
+    .name {
+      font-size: 26px;
+      font-weight: 600;
+      margin-bottom: 8px;
+    }
+
+    .job {
+      font-size: 18px;
+      font-weight: 400;
+      color: #555;
+      margin-bottom: 20px;
+    }
+
+    .buttons p {
+      font-size: 14px;
+      margin-bottom: 20px;
+    }
+
+    button {
+      background-color: #007bff;
+      border: none;
+      padding: 10px 20px;
+      color: #fff;
+      font-size: 16px;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #0056b3;
+    }
+
+    button a {
+      text-decoration: none;
+      color: white;
+    }
+
+    .media-icons {
+      display: flex;
+      margin-top: 20px;
+    }
+
+    .media-icons .icon {
+      font-size: 24px;
+      margin-right: 15px;
+      color: #007bff;
+      transition: color 0.3s ease;
+    }
+
+    .media-icons .icon:hover {
+      color: #0056b3;
+    }
+
+    /* Theme Toggle */
+    .theme-toggle {
+      display: none;
+    }
+
+    .toggle-label {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      cursor: pointer;
+    }
+
+    .toggle {
+      width: 40px;
+      height: 20px;
+      border-radius: 20px;
+      background-color: #000;
+      position: relative;
+    }
+
+    .toggle .circle {
+      width: 16px;
+      height: 16px;
+      background-color: #fff;
+      border-radius: 50%;
+      position: absolute;
+      top: 50%;
+      left: 4px;
+      transform: translateY(-50%);
+      transition: left 0.3s ease;
+    }
+
+    .theme-toggle:checked + .outer .toggle .circle {
+      left: 20px;
+    }
+
+    .theme-toggle:checked + .outer {
+      background-color: #333;
+    }
+
+    .theme-toggle:checked + .outer .content {
+      background-color: #444;
+      color: #fff;
+    }
+
+    .footer {
+      position: absolute;
+      bottom: 10px;
+      right: 10px;
+      font-size: 12px;
+      color: #777;
+    }
+  </style>
+</head>
 <body>
- <div class="container">
-   <input type="checkbox" id="switch">
-  <div class="outer">
-    <div class="content">
-      <label for="switch">
-        <span class="toggle">
-          <span class="circle"></span>
-        </span>
-      </label>
-      <div class="image-box">
-       <img src="https://i.ibb.co/nrm9GZ2/078531b82abe992b705dceb8842b2617.jpg" alt="profile">
-      </div>
-      <div class="details">
-        <div class="name">STAFF - RAN</div>
-        <div class="job">“POGI”</div>
-        <div class="buttons">
-          <p>MAHILIG SA KAPE<br>GOOD BOY.</p>
-          <button><a href="https://pornhub.com" style="text-decoration: none; color: white;">Message</a></button>
+  <div class="container">
+    <input type="checkbox" id="switch" class="theme-toggle">
+    <div class="outer">
+      <div class="content">
+        <label for="switch" class="toggle-label">
+          <span class="toggle">
+            <span class="circle"></span>
+          </span>
+        </label>
+        <div class="image-box">
+          <img src="https://i.ibb.co/nrm9GZ2/078531b82abe992b705dceb8842b2617.jpg" alt="profile" class="profile-img">
         </div>
-      </div>
-     <<div class="media-icons">
-        <a href="https://pornhub.com" class="fb"><i class="fab fa-twitter"></i></a>
-        <a href="https://pornhub.com" class="github"><i class="fab fa-github"></i></a>
-        <a href="https://pornhub.com" class="instagram"><i class="fab fa-instagram"></i></a>
+        <div class="details">
+          <div class="name">Autobot - RAN</div>
+          <div class="job">“POGI”</div>
+          <div class="buttons">
+            <p>MAHILIG SA KAPE<br>GOOD BOY.</p>
+            <button><a href="https://pornhub.com" class="button-link">Message</a></button>
+          </div>
+        </div>
+        <div class="media-icons">
+          <a href="https://pornhub.com" class="icon"><i class="fab fa-twitter"></i></a>
+          <a href="https://pornhub.com" class="icon"><i class="fab fa-github"></i></a>
+          <a href="https://pornhub.com" class="icon"><i class="fab fa-instagram"></i></a>
+        </div>
       </div>
     </div>
   </div>
- </div>
+
+  <!-- Footer with Aziz Van Gogh Signature -->
+  <div class="footer">
+    <p>Site created by Aziz Van Gogh</p>
+  </div>
 </body>
 </html>
